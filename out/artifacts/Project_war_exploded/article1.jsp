@@ -11,9 +11,9 @@
     <jsp:param name="title" value="Article 1: Hoe was de projectweek?"/>
 </jsp:include>
 <main>
-        <a href="Controller" id="backButton">
-            <button type="submit" onclick="closeSocket()">Back</button>
-        </a>
+    <a href="Controller" id="backButton">
+        <button type="submit" onclick="closeSocket()">Back</button>
+    </a>
 
     <div>
         <h1>Hoe was de projectweek?</h1>
