@@ -84,6 +84,45 @@
 
 		<br>
 
+		<div>
+			<h3>Register a new user</h3>
+			<div>
+				<form method="post" action="Controller?action=RegisterUser">
+					<p>
+						<label for="angularNaam">Last Name</label>
+						<input type="text" id="angularNaam" name="achternaam" value="">
+					</p>
+					<p>
+						<label for="angularVoorNaam">First Name</label>
+						<input type="text" id="angularVoorNaam" name="voornaam" value="">
+					</p>
+					<p>
+						<label for="angularEmail">Email</label>
+						<input type="text" id="angularEmail" name="email" value="">
+					</p>
+					<p>
+						<label for="angularGeslacht">Gender</label>
+						<input type="text" id="angularGeslacht" name="geslacht" value="">
+					</p>
+					<p>
+						<label for="angularPaswoord">Password</label>
+						<input type="password" id="angularPaswoord" name="paswoord" value="">
+					</p>
+					<p>
+						<label for="angularPaswoordHerhaling">Repeat Password</label>
+						<input type="password" id="angularPaswoordHerhaling" name="paswoordHerhaling" value="">
+					</p>
+					<p>
+						<label for="angularLeeftijd">Age</label>
+						<input type="text" id="angularLeeftijd" name="leeftijd" value="">
+					</p>
+					<p>
+						<input type="submit" id="angularknop" value="Register new user">
+					</p>
+				</form>
+			</div>
+		</div>
+
 	</main>
 
 	<jsp:include page="footer.jsp">
