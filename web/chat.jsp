@@ -64,7 +64,7 @@
                 <option value="Offline">
                 <option value="Away">
             </datalist>
-        <input type="button" id="changeStatus" value="Change Status">
+        <button type="submit" onclick="changeStatus()">Change Status</button>
 
         <br>
 

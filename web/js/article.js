@@ -1,9 +1,11 @@
+/*
 deleteCookie("loggedIn");
 
 //deletes the cookie on call
 function deleteCookie(name){
     document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
 }
+*/
 
 var webSocket;
 var backButton = document.getElementById("backButton")
@@ -23,9 +25,11 @@ function openSocket() {
 }
 
 function send() {
+    console.log("send");
     var comment = "Rating: " + document.getElementById("rating").value +
                   " - Username: " + document.getElementById("username").value +
                   " - Comment: " + document.getElementById("comment").value;
+    console.log("comment: " + comment);
     webSocket.send(comment);
 }
 

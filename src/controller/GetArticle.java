@@ -10,7 +10,7 @@ import java.util.List;
 public class GetArticle extends SynchronousRequestHandler {
     @Override
     public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<String> articles = this.getArticles(6);
+        List<String> articles = this.getArticles(8);
         String articleNrStr = request.getParameter("articleNr");
         int articleNr = Integer.parseInt(articleNrStr);
 
