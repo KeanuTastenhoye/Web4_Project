@@ -11,7 +11,9 @@
     <jsp:param name="title" value="Article 6: Wat vond je van het examen Web4?"/>
 </jsp:include>
 <main>
-    <a href="Controller" id="backButton">Back</a>
+    <a href="Controller" id="backButton">
+        <button type="submit" onclick="closeSocket()">Back</button>
+    </a>
 
     <div>
         <h1>Wat vond je van het examen Web4?</h1>
@@ -39,7 +41,7 @@
             <input type="text" id="comment" name="comment"/>
         </p>
         <p>
-            <input type="submit" id="postCommentButton" value="Post comment">
+            <button type="submit" onclick="send()">Send</button>
         </p>
     </div>
 
