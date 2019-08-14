@@ -1,12 +1,20 @@
 var changeStatusRequest = new XMLHttpRequest();
 
-var newStatus = document.getElementById("changeStatus");
-newStatus.onclick = changeStatus;
-
 var logOut = document.getElementById("logoutbutton");
-logOut.onclick = setOffline();
+logOut.onclick = setOffline;
 
 window.onload = start;
+
+//Creates a simple cookie with only one value: loggedIn
+//This allows us to properly know if the user is logged in or not
+function setCookie(boolLoggedIn) {
+    document.cookie = "loggedIn=" + boolLoggedIn.toString()
+}
+
+//Deletes the cookie on call
+function deleteCookie(name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
+}
 
 //Changes status based on what the user inputs on the website
 function changeStatus() {
@@ -56,24 +64,14 @@ function setOnline(){
 }
 
 function setOffline() {
-    changeStatusWithString("offline")
+    changeStatusWithString("offline");
     deleteCookie("loggedIn")
-}
-
-//Creates a simple cookie with only one value: loggedIn
-//This allows us to properly know if the user is logged in or not
-function setCookie(boolLoggedIn) {
-    document.cookie = "loggedIn=" + boolLoggedIn.toString()
-}
-
-//Deletes the cookie on call
-function deleteCookie(name) {
-    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
 }
 
 //For body onload
 function start() {
     if (document.cookie.toString() !== "loggedIn=true") {
+        console.log("ehehhehe");
         setOnline();
         changeStatusWithString("online");
     }

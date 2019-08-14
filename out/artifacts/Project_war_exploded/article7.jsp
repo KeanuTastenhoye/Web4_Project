@@ -14,7 +14,7 @@
     <a href="Controller" id="backButton">Back</a>
 
     <div>
-        <h1>Wat vond je van het examen Web4?</h1>
+        <h1>Wat is een aangename kamer temperatuur?</h1>
     </div>
 
     <div>
