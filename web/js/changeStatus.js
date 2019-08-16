@@ -1,21 +1,5 @@
 var changeStatusRequest = new XMLHttpRequest();
 
-var logOut = document.getElementById("logoutbutton");
-logOut.onclick = setOffline;
-
-window.onload = start;
-
-//Creates a simple cookie with only one value: loggedIn
-//This allows us to properly know if the user is logged in or not
-function setCookie(boolLoggedIn) {
-    document.cookie = "loggedIn=" + boolLoggedIn.toString()
-}
-
-//Deletes the cookie on call
-function deleteCookie(name) {
-    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
-}
-
 //Changes status based on what the user inputs on the website
 function changeStatus() {
     var newStatusValue = document.getElementById("newStatus").value;
@@ -32,6 +16,23 @@ function changeStatus() {
     } else {
         currentStatus.innerHTML = newStatusValue;
     }
+}
+
+/*
+var logOut = document.getElementById("logoutbutton");
+logOut.onclick = setOffline;
+
+window.onload = start;
+
+//Creates a simple cookie with only one value: loggedIn
+//This allows us to properly know if the user is logged in or not
+function setCookie(boolLoggedIn) {
+    document.cookie = "loggedIn=" + boolLoggedIn.toString()
+}
+
+//Deletes the cookie on call
+function deleteCookie(name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
 }
 
 //Changes status via the console if the user wants to
@@ -70,10 +71,9 @@ function setOffline() {
 
 //For body onload
 function start() {
-    console.log("In start");
     if (document.cookie.toString() !== "loggedIn=true") {
-        console.log("ehehhehe");
         setOnline();
         changeStatusWithString("online");
     }
 }
+*/

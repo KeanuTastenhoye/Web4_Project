@@ -13,6 +13,7 @@ import java.util.List;
 public class ChangeStatus extends AsynchronousRequestHandler {
     @Override
     public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        /*
         PersonService model = new PersonService();
         Person user = (Person) request.getSession().getAttribute("user");
 
@@ -26,6 +27,14 @@ public class ChangeStatus extends AsynchronousRequestHandler {
             model.getPerson(person.getUserId()).setUserStatus(newStatus);
             model.updateStatusPerson(person, newStatus);
         }
+        */
+
+        Person person = (Person) request.getSession().getAttribute("user");
+        String newStatus = request.getParameter("newStatus");
+
+        getPersonService().getPerson(person.getUserId()).setUserStatus(newStatus);
+        getPersonService().updateStatusPerson(person, newStatus);
+
         return "chat.jsp";
     }
 }

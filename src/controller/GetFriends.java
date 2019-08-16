@@ -11,7 +11,7 @@ import java.util.List;
 public class GetFriends extends AsynchronousRequestHandler {
     @Override
     public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        Person user = (Person) request.getSession().getAttribute("user");
+        /*
         List<Person> all = new ArrayList<>();
 
         if (user != null) {
@@ -36,6 +36,15 @@ public class GetFriends extends AsynchronousRequestHandler {
             response.setHeader("Access-Control-Allow-Origin", "*");
             response.getWriter().write(toJSON(people));
         }
+        */
+
+        Person user = (Person) request.getSession().getAttribute("user");
+        List<Person> friends = user.getFriendList();
+
+        response.setContentType("application/json");
+        response.setHeader("Access-Control-Allow-Origin", "http://localhost:8080");
+        response.getWriter().write(toJSON(friends));
+
         return null;
     }
 }
