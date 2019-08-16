@@ -70,6 +70,7 @@ function setOffline() {
 
 //For body onload
 function start() {
+    console.log("In start");
     if (document.cookie.toString() !== "loggedIn=true") {
         console.log("ehehhehe");
         setOnline();
