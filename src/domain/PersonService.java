@@ -44,9 +44,9 @@ public class PersonService {
 		getPersonRepository().add(person);
 	}
 
-	public void updatePersons(Person person) {
-		getPersonRepository().update(person);
-	}
+	public void updatePersons(Person person) { getPersonRepository().update(person); }
+
+	public void updateStatusPerson(Person person, String status) { getPersonRepository().updateStatus(person, status); }
 
 	public void deletePerson(String id) {
 		getPersonRepository().delete(id);

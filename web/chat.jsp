@@ -6,7 +6,7 @@
 <jsp:include page="head.jsp">
     <jsp:param name="title" value="Chat" />
 </jsp:include>
-<body>
+<body onload="getFriends()">
     <jsp:include page="header.jsp">
         <jsp:param name="title" value="Chat" />
     </jsp:include>
@@ -18,9 +18,9 @@
             div.status {text-align: right;}
             button.stoemeKnop {text-align: left;}
         </style>
-
+        
         <div class="status">
-            <p>Current Status: <span id="currentStatus"> </span></p>
+            <p>Current Status: <span id="currentStatus"> <c:if test="${user != null}"> Online </c:if> </span> </p>
         </div>
 
         <br>
@@ -70,7 +70,7 @@
 
         <p>Add friend: </p>
         <input id="newFriend" type="text">
-        <button type="submit" onclick="addFriend(), getFriends()">Add Friend</button>
+        <button type="submit" onclick="addFriend()">Add Friend</button>
 
         <br>
 

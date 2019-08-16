@@ -88,6 +88,14 @@ public class PersonRepositoryStub implements PersonRepository {
 		persons.put(person.getUserId(), person);
 	}
 
+	public void updateStatus(Person person, String status){
+		if(person == null || status == null){
+			throw new IllegalArgumentException("No person and/or status given");
+		}
+		person.setUserStatus(status);
+		persons.put(person.getUserId(), person);
+	}
+
 	public void delete(String personId){
 		if(personId == null){
 			throw new IllegalArgumentException("No id given");

@@ -23,6 +23,8 @@ public interface PersonRepository {
 
 	void update(Person person);
 
+	void updateStatus(Person person, String status);
+
 	//Conversation methodes
 
 	List<Conversation> getConversations();
