@@ -6,7 +6,7 @@
 <jsp:include page="head.jsp">
     <jsp:param name="title" value="Chat" />
 </jsp:include>
-<body onload="getFriends(); getChatMessage()">
+<body onload="getFriends()">
     <jsp:include page="header.jsp">
         <jsp:param name="title" value="Chat" />
     </jsp:include>
